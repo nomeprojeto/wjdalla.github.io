@@ -18,21 +18,21 @@ body {
 }
 
 /* LINKS */
-    a:link { 
-      text-decoration: none;
-      font-weight: 300;
-    } 
-    a:visited { 
-      text-decoration: none; 
-      color: black;
-    } 
-    a:hover { 
-      text-decoration: none;
-      color:#9969F9;
-    } 
-    a:active { 
-      text-decoration: none; 
-    }
+a:link { 
+  text-decoration: none;
+  font-weight: 300;
+} 
+a:visited { 
+  text-decoration: none; 
+  color: black;
+} 
+a:hover { 
+  text-decoration: none;
+  color:#9969F9;
+} 
+a:active { 
+  text-decoration: none; 
+}
 
 
 /*Lists*/
@@ -112,48 +112,61 @@ nav ul li  /* lista do Menu*/
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 /* retângulo à esquerda - nome e serviços*/
 #left
 {
   background-color:#9969F9;
-  width: 55%;
+  width: 55vw;
   margin-top: 50px;
   margin-bottom: 50px;
-    /*to top-left corner, top-right corner,to bottom-left corner*/
-    border-radius: 0px 100px 20px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+  /* to top-left corner, top-right corner,to bottom-left corner */
+  border-radius: 0px 100px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-    #left p 
-    {
-      padding: 100px;
-      width: 70%;
-    /*Font setting*/
-      font-size: 36px;
-      color: #F8F8F8;
-    /*para defenir bem o tamanho que eu desejo = quase a tela toda*/
-    margin-top: 80px;
-    margin-bottom: 80px;
-    }
+
+#left p 
+{
+  padding: 100px;
+  width: 70%;
+  color: #F8F8F8;
+  /* para defenir bem o tamanho que eu desejo = quase a tela toda */
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+#left #index 
+{
+  /* Font setting */
+  font-size: 36px;
+}
+
+#left #about 
+{
+  /* Font setting */
+  font-size: 22px;
+}
   
-    /*Por os textos em grande e bold = o meu nome*/
-    div p span
-    {
-        font-size: 36px;
-        font-weight: bold;
-      }
+/*Por os textos em grande e bold = o meu nome*/
+#left p span
+{
+  font-size: 36px;
+  font-weight: bold;
+}
 
 /* retângulo à direita - "Currently available""*/
 #right
 {
   background-color:#9969F9;
-  width: 35%;
+  width: 35vw;
   margin-top: 50px;
   margin-bottom: 50px;
+
   /*to top-left corner, top-right corner,to bottom-left corner*/
   border-radius: 100px 0px  0px 20px;
   display: flex;
@@ -161,17 +174,17 @@ nav ul li  /* lista do Menu*/
   align-items: center;
 }
 
-  #right p 
-  {
-    padding: 100px;
-    width: 30%;
-      /*Font setting*/
-      color: #F8F8F8;
-      font-size: 36px;
-      /*para defenir bem o tamanho que eu desejo = quase a tela toda*/
-      margin-top: 20%;
-      margin-bottom: 20%;
-  }
+#right p 
+{
+  /*Font setting*/
+  color: #F8F8F8;
+  font-size: 36px;
+}
+
+#right p span
+{
+  text-decoration-line: underline;
+}
 
 
 /* IMAGENS SCROLL */
@@ -195,8 +208,8 @@ figure /*Imagens Sticky Scroll*/
     figcaption /*legenda das imagens stickys*/
     {
       position: absolute;
-      top: 425px;
-      left: 92px;
+      top: 50%;
+      left: 6.5%;
       color: #F8F8F8;
       mix-blend-mode: difference;
       margin-top: 15px;
@@ -227,7 +240,7 @@ section figure a {
   
   color: #F8F8F8;
   background-color: #9969F9;
-  opacity: 25%;
+  opacity: 45%;
 
   padding: 50px;
   border: none;
@@ -274,51 +287,73 @@ align-items: center;
 
 /* TOOL-BOX - Onde mostro aptidões técnicas - retângulos com icones e texto*/
 /*Secção que controla a Tool Box: a sua forma e espaçamento entre o título e os conteudos*/
-#Designers_ToolBox {
+
+#right #Designers_ToolBox 
+{
+  width: 100%;
+  height: 70%;
+  padding-left: 100px;
+  
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 20px;
+  align-content: flex-start;
+  gap: 2%;
 }
 
-/*ToolKit - Agrupa os conteúdos e controla a sua formação*/
-.box-group {
-  padding: 40px;
+#right #Designers_ToolBox .TollBox 
+{
+  border: 3px solid #F8F8F8;
+  border-radius: 10px;
+  width: 200px;
+
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
-  margin-left: auto;
- max-width: 60%;
- justify-content: flex-end;
+
+  padding: 15px;
+}
+
+#right #Designers_ToolBox .TollBox img
+{
+  width: 50px;
+}
+
+#right #Designers_ToolBox .TollBox p
+{
+  flex-grow: 1;
+  font-size: 16px;
 }
 
 /* dá forma á ToolBox */
-.TollBox
+TollBox
 {
   display: flex;
   align-items: center;
-  padding: 15px;
+  /* padding: 15px; */
   background-color: #F8F8F8;
   border: 3px solid #9969F9;
-  border-radius: 10px;
-  width: 200px;
+  
 }
 
   /*Controla os conteúdos dentro do ToolKit*/
-  .TollBox span img
+  TollBox span img
   {
     position: absolute;
     margin-left: 20px;
   }
-      /* espaçamento entre o ícone e o texto */
-      .TollBox img {
-        margin-right: 20px; /* espaçamento entre o ícone e o texto */
-      }
+  /* espaçamento entre o ícone e o texto */
+  TollBox img {
+    margin-right: 20px; /* espaçamento entre o ícone e o texto */
+  }
 
 
   /* texto da Toolbox */
-  .TollBox span
+  TollBox span
   {
     font-size: 15px;
     font-weight: 600;
@@ -717,19 +752,17 @@ h3
 
 footer
 {
-padding: 20px;
+padding: 2%;
 border-top: #9969F9 5px solid;
 border-radius: 20px;
 
 /*flex settings*/
 display: flex;
 justify-content: space-between;
-
 }
 
 footer p
 {
-  margin-left: 10px;
   letter-spacing: 1.5px;
 }
 
@@ -747,12 +780,6 @@ width: 70%;
 display: flex;
 justify-content: flex-end;
 gap: 2%;
-
-}
-
-footer img
-{
-  width: 13%;
 }
 
 .socials_button
@@ -771,12 +798,17 @@ gap: 2%;
   font-size: 14px;
 }
 
-footer a:visited
+#Socials .socials_button img
+{
+  width: 13%;
+}
+
+#Socials a:visited
 {
   color: #F8F8F8;
 }
 
-footer a:hover
+#Socials a:hover
 {
   color: #432285;
 }
